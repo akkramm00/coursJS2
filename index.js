@@ -137,7 +137,77 @@ btn1.addEventListener('click', () =>{
   questionContainer.innerHTML += "<h3> bonne reponse" + " " + answer2 + "</h3>";
 })
 
-//------------setTimeout------------------------------
+//--------------------setTimeout------------------------------
 setTimeout(() => {
 questioConatiner.style.borderRadius = "200px";
 },1000);
+
+//--------------- les dates en javScript----------------------
+const date = new Date();
+console.log(date);
+const date1 = new Date(2023, 04, 08);
+console.log(date1);
+const date3 = new Date(2024, 00, 00);
+console.log(date3);
+const date4 = new Date(2024, 0, 01);
+console.log(date4);
+const date5 = new Date(2024, 0, 13);
+console.log(date5);
+
+//Pour construire et utiliser des dates en JavaScript, on utilise l'objet Date().
+// Si on ne lui passe aucun paramètre, il retourne la date courante.
+// En paramètres, il ne faut pas utiliser les dates en chaînes de caractères (ex : 'February 29, 2020 09:30:59'), mais utiliser les paramètres "année", "mois"...
+// Les mois vont de 0 (janvier) à 11 (décembre).
+
+//---------les setters et les getters----------------------------
+console.log("les setters et les getters ")
+const date6 = new Date()
+
+date6.setFullYear(2024)
+date6.setMonth(00)
+date6.setDate(13)
+date6.setHours(22)
+date6.setMinutes(45)
+date6.setSeconds(50)
+date6.setMilliseconds(800)
+
+console.log(date6);
+console.log(date6.getTime());// le timestampde date6.
+
+const date7 = new Date(2023, 00, 20, 01, 45, 50, 900)
+console.log(date7.getTime());
+console.log(date7.getFullYear())
+console.log(date7.getMonth())
+console.log(date7.getDate())
+console.log(date7.getHours())
+console.log(date7.getMinutes())
+console.log(date7.getSeconds())
+console.log(date7.getMilliseconds());
+
+//afficher le nombres de seconds de date8 en timestamp:
+const date8 = new Date(2020, 11, 25)
+console.log(date8.getTime())
+
+//afficher le mois de date8 dans la console:
+console.log(date8.getMonth())
+
+// add time o f the date8:
+console.log('(add time of date8)')
+date8.setHours(20)
+date8.setMinutes(30)
+console.log(date8);
+// we can also write
+date8.setHours(20, 30)
+console.log(date8);
+
+// Manipulation des getters et des setters pour actualiser les dates
+// on rajoute par exemple 2ans, 4mois, 15jours, 4heures, 30min et 45secondes a "date7":
+const date9 =new date()
+date9.setFullYear(date7.getFullYear()+ 2)
+date9.setMonth(date7.getMonth() + 4)
+date9.setDate(date7.getDate() + 15)
+date9.setHours(date7.getHours() + 4)
+date9.setMinutes(date7.getMinutes() + 30)
+date9.setSeconds(date7.getSeconds() + 45)
+console.log('affichage de la la date9')
+console.log(date9);
